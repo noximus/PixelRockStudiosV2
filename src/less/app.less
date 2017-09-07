@@ -1,3 +1,53 @@
 @import "mobile-angular-ui/src/less/mobile-angular-ui-base.less";
 @import "mixins.less";
 @import "variables.less";
+
+.app{
+    background: #212121;
+    color: #fefefe;
+}
+.hero-logo{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.navbar-app .btn, .navbar-app .btn-navbar{
+    color: #212121;
+    i{
+        color: #7b42b4;
+    }
+}
+@media (max-width: 767px){
+    .hidden-sm {
+        display: none;
+    }
+}
+@media (max-width: 991px){
+    .hidden-md {
+        display: none;
+    }
+}
+@media (max-width: 1199px){
+    .hidden-lg {
+        display: none;
+    }
+}
+.app-logo{
+    position: relative;
+    width: 250px;
+    line-height: 70px;
+    padding:0 10px;
+    font-size: 23px;
+    color: #fff;
+    margin: 0 auto;
+    z-index: 10;
+    +.scrollable{
+        padding-top:70px;
+    }
+    img{
+            width: 100%;
+    padding: 10px 30px;
+    }
+}
+.sidebar-left{
+    background: #212121;
+}
