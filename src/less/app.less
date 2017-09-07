@@ -2,18 +2,39 @@
 @import "mixins.less";
 @import "variables.less";
 
+@purple: #7b42b4;
+@dark-purple: #481e76;
+@dark-grey: #212121;
+@light-grey: #fefefe;
+
+a {
+    text-decoration: none;
+    color: @purple;
+}
+.page-header{
+    color: @light-grey;
+    border-bottom: 1px solid @purple;
+    small{
+        color: @purple;
+    }
+}
+.portfolio-item{
+    h3{
+        padding-top: 5px;
+    }
+}
 .app{
-    background: #212121;
-    color: #fefefe;
+    background: @dark-grey;
+    color: @light-grey;
 }
 .hero-logo{
     padding-top: 50px;
     padding-bottom: 50px;
 }
 .navbar-app .btn, .navbar-app .btn-navbar{
-    color: #212121;
+    color: @dark-grey;
     i{
-        color: #7b42b4;
+        color: @purple;
     }
 }
 @media (max-width: 767px){
@@ -37,7 +58,7 @@
     line-height: 70px;
     padding:0 10px;
     font-size: 23px;
-    color: #fff;
+    color: @light-grey;
     margin: 0 auto;
     z-index: 10;
     +.scrollable{
@@ -49,5 +70,76 @@
     }
 }
 .sidebar-left{
-    background: #212121;
+    background: @dark-grey;
+}
+.sideBarSearch{
+    border: none;
+}
+.portfolio{
+    .thumbnail {
+    padding: 2px;
+    background-color: @purple;
+    border: 1px solid @purple;
+    border-radius: 0px;
+    }
+}
+
+/*Bootstrap Pagination DOTS*/
+.pagination.pagination-dots{
+  background:none;
+  border:none;
+}
+.pagination.pagination-dots > li{
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+}
+.pagination.pagination-dots > li,
+.pagination.pagination-dots > li > a{
+  background:none;
+  border:none;
+}
+.pagination.pagination-dots > li > a{
+  display:block;
+  text-indent:-5000px;
+  width:12px;
+  height:12px;
+  padding:0px;
+  margin:0px;
+   background:  @light-grey;
+  	-moz-border-radius: 50%; /* Firefox */
+  	-webkit-border-radius: 50%; /* Safari and Chrome */
+  	-khtml-border-radius: 50%; /* Linux browsers */
+	  border-radius: 50%; /* Opera 12.120, IE and CSS12 */ 
+}
+.pagination.pagination-dots > li.active > a{
+   background:  @purple;
+}
+.pagination.pagination-dots > li:hover > a{
+   background:  @dark-purple;
+}
+.pagination.pagination-dots > li:first-child > a,
+.pagination.pagination-dots > li:last-child > a{
+  -moz-border-radius: 50%; /* Firefox */
+  	-webkit-border-radius: 50%; /* Safari and Chrome */
+  	-khtml-border-radius: 50%; /* Linux browsers */
+	  border-radius: 50%; /* Opera 12.120, IE and CSS12 */ 
+}
+.pagination.pagination-dots.pagination-lg > li {
+}
+.pagination.pagination-dots.pagination-lg > li > a{
+  width:18px;
+  height:18px;
+}
+.pagination.pagination-dots.pagination-sm > li{
+}
+.pagination.pagination-dots.pagination-sm > li > a{
+  width:10px;
+  height:10px;
+}
+.pagination.pagination-dots.pagination-xs > li{
+}
+.pagination.pagination-dots.pagination-xs > li > a{
+  width:6px;
+  height:6px;
 }
